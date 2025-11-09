@@ -21,13 +21,11 @@ function NoticiaDetalle() {
         setErrorMsg("Error al cargar la noticia.");
       } else {
         setNoticia(data);
-
-        // Construir la URL pública
         if (data?.imagen_url) {
           const { data: publicData } = supabase
             .storage
             .from('imagenes')
-            .getPublicUrl(data.imagen_url); // <-- SOLO el path
+            .getPublicUrl(data.imagen_url); 
           setImageUrl(publicData.publicUrl);
         }
       }
@@ -60,4 +58,5 @@ function NoticiaDetalle() {
 }
 
 export default NoticiaDetalle;
+
 

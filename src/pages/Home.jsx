@@ -19,8 +19,20 @@ function Home() {
         return;
       }
 
-      // Agrupar por categoría
-      const agrupadas = data.reduce((acc, noticia) => {
+     
+      const dataConUrls = data.map(noticia => {
+        let imageUrl = "";
+        if (noticia.imagen_url) {
+          const { data: publicData } = supabase
+            .storage
+            .from('imagenes')
+            .getPublicUrl(noticia.imagen_url);
+          imageUrl = publicData.publicUrl;
+        }
+        return { ...noticia, imageUrl };
+      });
+
+      const agrupadas = dataConUrls.reduce((acc, noticia) => {
         const categoria = noticia.categoria || "Sin categoría";
         if (!acc[categoria]) acc[categoria] = [];
         acc[categoria].push(noticia);
@@ -49,10 +61,10 @@ function Home() {
             <section key={categoria} className="seccion">
               <h2 className="seccion-titulo">{categoria}</h2>
               <div className="noticias-grid">
-                {noticias.map(({ id, titulo, subtitulo, imagen_url }) => (
+                {noticias.map(({ id, titulo, subtitulo, imageUrl }) => (
                   <article key={id} className="noticia-card">
                     <div className="imagen-wrapper">
-                      <img src={imagen_url} alt={titulo} />
+                      {imageUrl && <img src={imageUrl} alt={titulo} />}
                     </div>
                     <div className="noticia-content">
                       <h3>{titulo}</h3>
@@ -68,11 +80,11 @@ function Home() {
           ))
         )}
       </main>
-
     </div>
   );
 }
 
 export default Home;
+
 
 

@@ -7,10 +7,10 @@ function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Rutas donde NO se mostrará el botón de cerrar sesión
+
   const hideLogoutRoutes = ["/", "/login", "/register"];
 
-  // Solo mostrar el botón si NO estamos en esas rutas
+ 
   const shouldShowLogout = !hideLogoutRoutes.includes(location.pathname);
 
   const handleLogout = async () => {
@@ -25,7 +25,7 @@ function Navbar() {
         <Link to="/">Inicio</Link>
         <Link to="/dashboard">Panel</Link>
 
-        {/* 👇 Botón solo visible si no estamos en las rutas ocultas */}
+      
         {shouldShowLogout && (
           <button onClick={handleLogout}>Cerrar sesión</button>
         )}

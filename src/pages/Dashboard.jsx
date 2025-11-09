@@ -12,13 +12,13 @@ function Dashboard() {
 
   useEffect(() => {
     async function fetchUserAndRole() {
-      // Obtener sesión y usuario actual
+    
       const { data } = await supabase.auth.getSession();
       const authUser = data?.session?.user;
       setUser(authUser);
 
       if (authUser) {
-        // Intenta traer el rol desde tabla usuarios (mejor para control)
+       
         const { data: userRow, error } = await supabase
           .from("usuarios")
           .select("rol")
@@ -46,7 +46,7 @@ function Dashboard() {
       <SeccionesPanel />
       <FormularioSecciones />
 
-      {/* Acceso diferenciado por rol */}
+     
       {rol === "reportero" && (
         <>
           <FormularioNoticias user={user} />

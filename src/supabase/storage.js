@@ -6,7 +6,7 @@ const uploadImage = async (file) => {
     .from("imagenes")
     .upload(fileName, file);
   if (error) throw error;
-  return data.path;
+  return data.path;  
 };
 
 export default uploadImage;

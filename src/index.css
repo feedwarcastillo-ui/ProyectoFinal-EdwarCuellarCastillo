@@ -1,29 +1,81 @@
-:root {
-  --color-primary: #2563eb;
-  --color-primary-dark: #1e40af;
-  --color-bg: #f9fafb;
-  --color-text: #1a293b;
-  --color-error: #dc2626;
-  --border-radius: 8px;
-}
-body {
-  font-family: "Poppins", sans-serif;
-  background: var(--color-bg);
-  color: var(--color-text);
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #fff;             /* Fondo blanco */
+  font-family: 'Poppins', sans-serif;
+  color: #222f3e;               /* Gris oscuro profesional para texto */
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 60px;
+}
+
+h1, h2, h3 {
+  color: #0f172a;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
 button {
-  background-color: var(--color-primary);
-  color: white;
+  background-color: #2563eb;
+  color: #ffffff;
   border: none;
-  border-radius: var(--border-radius);
-  padding: 10px 20px;
+  padding: 10px 18px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
-button:hover:enabled {
-  background-color: var(--color-primary-dark);
+
+button:hover {
+  background-color: #1e40af;
   transform: translateY(-2px);
 }
-/* Más estilos consistentes para inputs, tablas, títulos, enlaces, etc. */
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1e40af;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+

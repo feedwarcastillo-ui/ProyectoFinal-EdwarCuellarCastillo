@@ -27,7 +27,6 @@
   margin-bottom: 25px;
 }
 
-/* Cargando */
 .loading {
   display: flex;
   flex-direction: column;
@@ -52,7 +51,6 @@
   }
 }
 
-/* Lista */
 .lista-secciones ul {
   list-style: none;
   padding: 0;
@@ -95,7 +93,7 @@
   margin: 0;
 }
 
-/* Botón eliminar */
+
 .btn-eliminar {
   background-color: #ef4444;
   color: white;
@@ -113,7 +111,6 @@
   transform: scale(1.05);
 }
 
-/* Sin secciones */
 .no-secciones {
   text-align: center;
   color: #64748b;

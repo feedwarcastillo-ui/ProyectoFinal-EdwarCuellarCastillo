@@ -55,7 +55,7 @@ button:hover {
   text-align: center;
   font-weight: 500;
 }
-/* Para pantallas medianas: tablets, ≤ 1024px */
+
 @media (max-width: 1024px) {
   .content {
     padding: 60px 40px;
@@ -74,7 +74,6 @@ button:hover {
   }
 }
 
-/* Para pantallas pequeñas: móviles grandes y pequeños, ≤ 768px */
 @media (max-width: 768px) {
   .hero-banner {
     height: 50vh;
@@ -111,7 +110,6 @@ button:hover {
   }
 }
 
-/* Para pantallas muy pequeñas: móviles pequeños, ≤ 480px */
 @media (max-width: 480px) {
   .hero-banner h1 {
     font-size: 1.8rem;

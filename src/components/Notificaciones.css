@@ -2,7 +2,7 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: #2563eb; /* azul por defecto */
+  background-color: #2563eb; 
   color: white;
   padding: 15px 20px;
   border-radius: 8px;
@@ -22,11 +22,11 @@
 }
 
 .notificacion-success {
-  background-color: #22c55e; /* verde */
+  background-color: #22c55e; 
 }
 
 .notificacion-error {
-  background-color: #dc2626; /* rojo */
+  background-color: #dc2626; 
 }
 
 .notificacion button {

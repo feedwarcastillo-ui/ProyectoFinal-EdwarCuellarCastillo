@@ -5,7 +5,7 @@ function Notificaciones({ mensaje, tipo = "info", onClose }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       onClose();
-    }, 4000); // Notificación visible por 4 segundos
+    }, 4000); 
 
     return () => clearTimeout(timer);
   }, [onClose]);

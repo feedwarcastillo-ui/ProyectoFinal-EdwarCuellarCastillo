@@ -1,6 +1,4 @@
-/* Login.css */
 
-/* El body y html deben ocupar toda la pantalla */
 html, body {
   height: 100%;
   margin: 0;
@@ -8,17 +6,17 @@ html, body {
   background: linear-gradient(135deg, #0a5275, #0e81a8);
 }
 
-/* Contenedor principal que centra el contenido */
+
 .login-page {
   display: flex;
-  align-items: center;          /* Centra verticalmente */
-  justify-content: center;      /* Centra horizontalmente */
-  height: 100vh;                /* Ocupa toda la altura de la pantalla */
-  width: 100%;                  /* Ocupa todo el ancho */
+  align-items: center;          
+  justify-content: center;      
+  height: 100vh;               
+  width: 100%;                  
   position: relative;
 }
 
-/* Fondo semitransparente opcional */
+
 .overlay {
   position: absolute;
   inset: 0;
@@ -26,10 +24,10 @@ html, body {
   z-index: 1;
 }
 
-/* Caja blanca del login */
+
 .login-container {
   position: relative;
-  z-index: 2;                   /* Se muestra encima del overlay */
+  z-index: 2;                   
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,7 +44,7 @@ html, body {
   text-align: center;
 }
 
-/* Título */
+
 .login-box h1 {
   font-size: 2rem;
   font-weight: 700;
@@ -59,7 +57,7 @@ html, body {
   margin-bottom: 1.5rem;
 }
 
-/* Inputs */
+
 .login-box input {
   display: block;
   width: 100%;

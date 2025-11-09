@@ -1,4 +1,4 @@
-/* FormularioSecciones.css */
+
 
 .secciones-container {
   background-color: #f8f9fa;
@@ -56,7 +56,6 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* Tabla */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -89,7 +88,7 @@ td button:hover {
   transform: scale(1.05);
 }
 
-/* Mensaje general */
+
 .mensaje {
   margin-top: 20px;
   font-weight: 600;
@@ -97,7 +96,7 @@ td button:hover {
   color: #2563eb;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .secciones-container {
     width: 90%;
@@ -113,13 +112,13 @@ td button:hover {
   }
 }
 
-/* --- Notificaciones.css --- */
+
 
 .notificacion {
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: #2563eb; /* blue default */
+  background-color: #2563eb; 
   color: white;
   padding: 15px 20px;
   border-radius: 8px;
@@ -167,7 +166,7 @@ td button:hover {
     transform: translateX(0);
   }
 }
-/* Para pantallas medianas: tablets, ≤ 1024px */
+
 @media (max-width: 1024px) {
   .content {
     padding: 60px 40px;
@@ -186,7 +185,7 @@ td button:hover {
   }
 }
 
-/* Para pantallas pequeñas: móviles grandes y pequeños, ≤ 768px */
+
 @media (max-width: 768px) {
   .hero-banner {
     height: 50vh;
@@ -223,7 +222,7 @@ td button:hover {
   }
 }
 
-/* Para pantallas muy pequeñas: móviles pequeños, ≤ 480px */
+
 @media (max-width: 480px) {
   .hero-banner h1 {
     font-size: 1.8rem;

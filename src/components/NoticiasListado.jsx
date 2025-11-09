@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../supabase/client";
+import "./NoticiasListado.css";
 
 function NoticiasListado({ user, role }) {
   const [noticias, setNoticias] = useState([]);
@@ -17,7 +18,7 @@ function NoticiasListado({ user, role }) {
       if (role === "reportero") {
         query = query
           .eq("autor_id", user.id)
-          .in("estado", ["Edición", "Terminado"]); // Solo estados permitidos para reportero
+          .in("estado", ["Edición", "Terminado"]); 
       }
 
       const { data, error } = await query;
