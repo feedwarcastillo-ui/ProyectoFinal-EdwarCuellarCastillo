@@ -1,0 +1,264 @@
+/* FormularioSecciones.css */
+
+.secciones-container {
+  background-color: #f8f9fa;
+  padding: 30px;
+  margin: 40px auto;
+  border-radius: 12px;
+  width: 70%;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+.secciones-container h2 {
+  text-align: center;
+  color: #1a293b;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+textarea {
+  min-height: 80px;
+}
+
+button {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  font-family: inherit;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+}
+
+td button {
+  margin-right: 10px;
+  background-color: #ef4444;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+td button:hover {
+  background-color: #dc2626;
+  transform: scale(1.05);
+}
+
+/* Mensaje general */
+.mensaje {
+  margin-top: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .secciones-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  th, td {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
+/* --- Notificaciones.css --- */
+
+.notificacion {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #2563eb; /* blue default */
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 250px;
+  font-weight: 600;
+  animation: slideIn 0.3s ease forwards;
+  user-select: none;
+}
+
+.notificacion-info {
+  background-color: #2563eb;
+}
+
+.notificacion-success {
+  background-color: #22c55e;
+}
+
+.notificacion-error {
+  background-color: #dc2626;
+}
+
+.notificacion button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Para pantallas medianas: tablets, ≤ 1024px */
+@media (max-width: 1024px) {
+  .content {
+    padding: 60px 40px;
+  }
+
+  .noticias-grid {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+  }
+
+  .formulario-container,
+  .secciones-container {
+    width: 90%;
+    padding: 25px;
+    margin: 30px auto;
+  }
+}
+
+/* Para pantallas pequeñas: móviles grandes y pequeños, ≤ 768px */
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 50vh;
+    padding: 0 20px;
+  }
+
+  .hero-banner h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-banner p {
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 40px 20px;
+  }
+
+  .seccion-titulo {
+    font-size: 1.6rem;
+  }
+
+  .noticias-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  form input,
+  form textarea,
+  form select,
+  form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Para pantallas muy pequeñas: móviles pequeños, ≤ 480px */
+@media (max-width: 480px) {
+  .hero-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .seccion-titulo {
+    font-size: 1.4rem;
+  }
+
+  .noticia-content h3 {
+    font-size: 1.1rem;
+  }
+
+  form input,
+  form textarea,
+  form select,
+  form button {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 10px 15px;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a,
+  .nav-links button {
+    margin: 5px 8px;
+    font-size: 14px;
+  }
+}

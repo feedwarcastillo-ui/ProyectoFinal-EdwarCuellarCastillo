@@ -1,0 +1,29 @@
+:root {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1e40af;
+  --color-bg: #f9fafb;
+  --color-text: #1a293b;
+  --color-error: #dc2626;
+  --border-radius: 8px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+button:hover:enabled {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+/* Más estilos consistentes para inputs, tablas, títulos, enlaces, etc. */

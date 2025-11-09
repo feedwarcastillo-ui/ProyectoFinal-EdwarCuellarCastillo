@@ -1,0 +1,52 @@
+.notificacion {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #2563eb; /* azul por defecto */
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 250px;
+  font-weight: 600;
+  animation: slideIn 0.3s ease forwards;
+  user-select: none;
+}
+
+.notificacion-info {
+  background-color: #2563eb;
+}
+
+.notificacion-success {
+  background-color: #22c55e; /* verde */
+}
+
+.notificacion-error {
+  background-color: #dc2626; /* rojo */
+}
+
+.notificacion button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

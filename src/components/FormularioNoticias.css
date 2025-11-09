@@ -1,0 +1,152 @@
+.formulario-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.formulario-container h2 {
+  text-align: center;
+  color: #1a2942;
+  margin-bottom: 20px;
+}
+
+.form-noticia input,
+.form-noticia textarea,
+.form-noticia select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.form-noticia input:focus,
+.form-noticia textarea:focus,
+.form-noticia select:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+
+button {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+.mensaje {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+/* Para pantallas medianas: tablets, ≤ 1024px */
+@media (max-width: 1024px) {
+  .content {
+    padding: 60px 40px;
+  }
+
+  .noticias-grid {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+  }
+
+  .formulario-container,
+  .secciones-container {
+    width: 90%;
+    padding: 25px;
+    margin: 30px auto;
+  }
+}
+
+/* Para pantallas pequeñas: móviles grandes y pequeños, ≤ 768px */
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 50vh;
+    padding: 0 20px;
+  }
+
+  .hero-banner h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-banner p {
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 40px 20px;
+  }
+
+  .seccion-titulo {
+    font-size: 1.6rem;
+  }
+
+  .noticias-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  form input,
+  form textarea,
+  form select,
+  form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Para pantallas muy pequeñas: móviles pequeños, ≤ 480px */
+@media (max-width: 480px) {
+  .hero-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .seccion-titulo {
+    font-size: 1.4rem;
+  }
+
+  .noticia-content h3 {
+    font-size: 1.1rem;
+  }
+
+  form input,
+  form textarea,
+  form select,
+  form button {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 10px 15px;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a,
+  .nav-links button {
+    margin: 5px 8px;
+    font-size: 14px;
+  }
+}

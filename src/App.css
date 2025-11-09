@@ -1,0 +1,89 @@
+/* 🔹 Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🔹 Estructura base */
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #f4f6f8; /* Fondo gris claro para vistas generales */
+  font-family: 'Poppins', sans-serif;
+  color: #1f2937;
+  overflow-x: hidden;
+}
+
+/* 🔹 Contenedor raíz React */
+#root {
+  min-height: 100vh;
+  /* ❌ No usar display:flex aquí para evitar conflicto con Login.jsx */
+}
+
+/* 🔹 Contenedor genérico centrado */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 60px;
+}
+
+/* 🔹 Encabezados */
+h1, h2, h3 {
+  color: #0f172a;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* 🔹 Botones globales */
+button {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* 🔹 Enlaces */
+a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1e40af;
+}
+
+/* 🔹 Utilidades de centrado */
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* 🔹 Diseño responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+}
